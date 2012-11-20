@@ -24,15 +24,16 @@ time, mark, audio, video {
 
 
 /* Base text styles */
+html {
+  font-size: 100.01%;
+}
 
 body {
-  padding:10px 50px 0 0;
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 75%;
   color: #232323;
   background-color: #FBFAF7;
-  margin: 0;
-  line-height: 1.8em;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 
 }
@@ -59,15 +60,15 @@ h1,h2, h3 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 2em;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 1.125em;
 }
 
 h4, h5, h6 {
@@ -86,7 +87,7 @@ a:hover {
 }
 
 a small {
-  font-size: 12px;
+  font-size: .75em;
 }
 
 em {
@@ -138,20 +139,16 @@ hr {
   margin:0 0 24px;
 }
 
-/* Images */
-
-img {
-  position: relative;
-  margin: 0 auto;
-  max-width: 650px;
-  padding: 5px;
-  margin: 10px 0 32px 0;
-  border: 1px solid #ccc;
-}
+/* logo */
 
 .logo {
-  padding: 10px;
   background: #FFF;
+}
+.logo img {
+  display: block;
+  width: 100%;
+  margin: .5em auto;
+  max-width: 160px;
 }
 
 
@@ -160,7 +157,7 @@ img {
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color:#000;
-  font-size:14px;
+  font-size:.875em;
 }
 
 pre {
@@ -188,7 +185,7 @@ table {
 
 th {
   font-family: 'Arvo', Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 1em;
   font-weight: normal;
   padding: 10px;
   background: #232323;
@@ -203,8 +200,9 @@ td {
 
 /* Wrapper */
 .wrapper {
-  width:960px;
+  max-width: 1440px;
 }
+
 
 
 /* Header */
@@ -212,36 +210,47 @@ td {
 header {
   background-color: #171717;
   color: #FDFDFB;
-  width:170px;
-  float:left;
-  position:fixed;
-  border: 1px solid #000;
-  -webkit-border-top-right-radius: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  -moz-border-radius-bottomright: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  padding: 34px 25px 22px 50px;
-  margin: 30px 25px 0 0;
+  padding: 2em 3%;
+  margin: 0 0 2em 0;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
 }
 
+
+/* Section - for main page content */
+
+section {
+  max-width: 650px;
+  padding: 2em 3%;
+  margin: 0 0 2em 0;
+}
+
+
+/* Footer */
+
+footer {
+  margin-top: 12ex;
+  clear: both;
+  font-size: .75em;
+}
+
+
+/* Detail Styles */
+
 p.header {
-  font-size: 16px;
+  font-size: 1em;
 }
 
 h1.header {
   font-family: Arvo, sans-serif;
-  font-size: 30px;
+  font-size: 2em;
   font-weight: 300;
   line-height: 1.3em;
   border-bottom: none;
   margin-top: 0;
 }
 
-
-h1.header, a.header, a.name, header a{
+header h1, a.header, a.name, header a {
   color: #fff;
 }
 
@@ -311,99 +320,49 @@ a.buttons:hover {
 }
 
 
-/* Section - for main page content */
 
-section {
-  width:650px;
-  float:right;
-  padding-bottom:50px;
-}
-
-
-/* Footer */
-
-footer {
-  margin-top: 12ex;
-}
-
-@media print, screen and (max-width: 740px) {
-
-  div.wrapper {
-    width:auto;
-    margin:0;
-  }
-
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
-  }
-
-  footer {
-    border-top: 1px solid #ccc;
-    margin:0 84px 0 50px;
-    padding:0;
-  }
-
-  header {
-    padding-right:320px;
-  }
-
-  section {
-    padding:20px 84px 20px 50px;
-    margin:0 0 20px;
-  }
-
-  header a small {
-    display:inline;
-  }
-
-  header ul {
-    position:absolute;
-    right:130px;
-    top:84px;
-  }
-}
-
-@media print, screen and (max-width: 720px) {
+/* --------------- Screens bigger than 620px ----------- */
+@media only screen and (min-width: 620px) {
   body {
-    word-wrap:break-word;
+    font-size: 87.5%;
   }
 
   header {
-    padding:10px 20px 20px;
-    margin-right: 0;
+    text-align: left;
+    float: left;
+    width: 25%;
+    margin: 2em 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
 
   section {
-    padding:10px 0 10px 20px;
-    margin:0 0 30px;
-  }
-
-  footer {
-    margin: 0 0 0 30px;
-  }
-
-  header ul, header p.view {
-    position:static;
+    float: left;
+    width: 63%;
+    padding-right: 0;
+    padding-left: 6%;
   }
 }
 
-@media print, screen and (max-width: 480px) {
-
-  header ul li.download {
-    display:none;
+/* --------------- Screens bigger than 768px ----------- */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 100%;
   }
-
-  footer {
-    margin: 0 0 0 20px;
-  }
-
-  footer a{
-    display:block;
-  }
-
 }
+
+/* --------------- Screens bigger than 1280px ----------- */
+@media only screen and (min-width: 1280px) {
+  body {
+    font-size: 125%;
+  }
+  section{
+    max-width: 800px;
+  }
+}
+
+
+
 
 @media print {
   body {
