@@ -254,8 +254,24 @@ header h1, a.header, a.name, header a {
   color: #fff;
 }
 
-a.header {
-  text-decoration: underline;
+nav {
+  overflow: hidden;
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+  display: inline-block;
+  background: #333332;
+  border-radius: 1em;
+  margin: 0 0 .25em 0;
+  padding: .25em .5em;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+  background: #3f3f3f;
 }
 
 a.name {
@@ -341,6 +357,12 @@ a.buttons:hover {
     width: 63%;
     padding-right: 0;
     padding-left: 6%;
+  }
+  
+  nav a,
+  nav a:link,
+  nav a:visited {
+    display: block;
   }
 }
 
