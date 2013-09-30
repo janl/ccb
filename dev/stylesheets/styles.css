@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Arvo:400,700,400italic);
-
 /* MeyerWeb Reset */
 
 html, body, div, span, applet, object, iframe,
@@ -48,7 +46,6 @@ p, ul, ol, table, dl {
 }
 
 h1, h2, h3 {
-/*   font-family: Arvo, Monaco, serif; */
   line-height:1.3;
   font-weight: normal;
 }
@@ -72,14 +69,12 @@ h3 {
 }
 
 h4, h5, h6 {
-/*   font-family: Arvo, Monaco, serif; */
   font-weight: 700;
 }
 
 a {
   color:#8cc63f;
   font-weight:500;
-  text-decoration:none;
 }
 
 a:hover {
@@ -208,7 +203,7 @@ td {
 /* Header */
 
 header {
-  background-color: #171717;
+  background-color: #072234;
   color: #FDFDFB;
   padding: 2em 3%;
   margin: 0 0 2em 0;
@@ -263,10 +258,10 @@ nav a,
 nav a:link,
 nav a:visited {
   display: inline-block;
-  background: #333332;
-  border-radius: 1em;
   margin: 0 0 .25em 0;
   padding: .25em .5em;
+  font-size: 1.4em;
+  text-decoration: none;
 }
 
 nav a:hover,
