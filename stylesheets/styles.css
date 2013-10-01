@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Arvo:400,700,400italic);
-
 /* MeyerWeb Reset */
 
 html, body, div, span, applet, object, iframe,
@@ -30,16 +28,15 @@ html {
 
 body {
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 75%;
-  color: #232323;
-  background-color: #FBFAF7;
+  color: #0099cc;
+  background-color: #072234;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #232323;
+  color: #f2f2f2;
   margin: 36px 0 10px;
 }
 
@@ -48,15 +45,14 @@ p, ul, ol, table, dl {
 }
 
 h1, h2, h3 {
-  font-family: Arvo, Monaco, serif;
   line-height:1.3;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 h1,h2, h3 {
   display: block;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
+  border-bottom: 1px solid #11517b;
+  padding-bottom: 10px;
 }
 
 h1 {
@@ -72,18 +68,17 @@ h3 {
 }
 
 h4, h5, h6 {
-  font-family: Arvo, Monaco, serif;
   font-weight: 700;
 }
 
-a {
-  color:#C30000;
-  font-weight:200;
-  text-decoration:none;
+a, h1 span {
+  color:#8cc63f;
+  font-weight:500;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #e91d25;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 a small {
@@ -134,7 +129,7 @@ dl p {
 
 hr {
   border:0;
-  background:#ccc;
+  background:#11517b;
   height:1px;
   margin:0 0 24px;
 }
@@ -142,14 +137,14 @@ hr {
 /* logo */
 
 .logo {
-  background: #FFF;
+  margin: 0;
 }
 .logo img {
   display: block;
   width: 100%;
-  margin: .5em auto;
+/*  margin: .5em auto;
   max-width: 160px;
-}
+*/}
 
 
 /* Code blocks */
@@ -175,28 +170,29 @@ pre {
 
 table {
   width:100%;
-}
-
-table {
-  border: 1px solid #ccc;
   margin-bottom: 32px;
   text-align: left;
+  color:#71cdf4;
+  border-spacing: 0;
  }
 
 th {
-  font-family: 'Arvo', Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  font-weight: normal;
+  font-size: 1.1em;
+  font-weight: 600;
   padding: 10px;
-  background: #232323;
-  color: #FDFEFB;
- }
+  color: white;
+  border-bottom: 1px solid #125682;
+}
 
 td {
-  padding: 10px;
-  background: #ccc;
- }
+  padding: 7px 15px;
+  background: #125682;
+}
 
+td:nth-child(2) {
+  background: none;
+  border-bottom: 1px solid #125682;
+}
 
 /* Wrapper */
 .wrapper {
@@ -208,10 +204,10 @@ td {
 /* Header */
 
 header {
-  background-color: #171717;
+  /* background-color: #072234; */
   color: #FDFDFB;
-  padding: 2em 3%;
-  margin: 0 0 2em 0;
+  /* padding: 2em 3%; */
+  /* margin: 0 0 2em 0; */
   text-align: center;
   -webkit-font-smoothing: antialiased;
 }
@@ -223,6 +219,7 @@ section {
   max-width: 650px;
   padding: 2em 3%;
   margin: 0 0 2em 0;
+  background-color: #092b41;
 }
 
 
@@ -262,16 +259,21 @@ nav a,
 nav a:link,
 nav a:visited {
   display: inline-block;
-  background: #333332;
-  border-radius: 1em;
-  margin: 0 0 .25em 0;
-  padding: .25em .5em;
+  padding: .25em 1.5em;
+  font-size: 1.4em;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #0b334e;
+}
+
+nav a:first-child {
+  border-top: 1px solid #0b334e;
 }
 
 nav a:hover,
 nav a:active,
 nav a:focus {
-  background: #3f3f3f;
+  background: #0099cc;
 }
 
 a.name {
@@ -317,6 +319,25 @@ header li:hover {
   background: linear-gradient(top, #C3001D 0%,#950119 100%);
 }
 
+a.register {
+  background: #e91d25;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 300;
+  padding: 11px 16px;
+  box-shadow: 4px 4px rgba(0,0,0,0.3);
+}
+
+a.register strong {
+  font-size: 120%;
+}
+
+a.register:hover {
+  background: white;
+  color: #e91d25;
+}
+
 a.buttons {
   -webkit-font-smoothing: antialiased;
   background: url(../images/arrow-down.png) no-repeat;
@@ -335,7 +356,25 @@ a.buttons:hover {
   text-decoration: none;
 }
 
+.speakers {
+  width: 100%;
+}
 
+.speakers li {
+  list-style: none;
+  clear: both;
+  min-height: 150px;
+}
+
+.speakers img {
+  width: 80px;
+  border: 4px solid white;
+  border-radius: 50px;
+}
+
+.speakers h4 {
+  display: table-cell;
+}
 
 /* --------------- Screens bigger than 620px ----------- */
 @media only screen and (min-width: 620px) {
@@ -347,23 +386,49 @@ a.buttons:hover {
     text-align: left;
     float: left;
     width: 25%;
-    margin: 2em 0;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+    /* margin: 2em 0; */
+    /* border-top-right-radius: 4px; */
+    /* border-bottom-right-radius: 4px; */
   }
 
   section {
     float: left;
     width: 63%;
-    padding-right: 0;
+    padding-right: 6%;
     padding-left: 6%;
+    box-shadow: -4px 0 0 1px rgba(0,0,0,0.2);
   }
-  
+
   nav a,
   nav a:link,
   nav a:visited {
     display: block;
   }
+
+  nav {
+    position: relative;
+  }
+
+  nav a:after {
+    content: "❯";
+    color: #0b334e;
+    position: absolute;
+    right: 1em;
+  }
+  nav a:hover:after {
+    color: white;
+  }
+
+  .speakers img {
+    float: left;
+    margin: 10px 20px;
+  }
+
+  .speakers .info {
+    display: block;
+    margin-left: 150px;
+  }
+
 }
 
 /* --------------- Screens bigger than 768px ----------- */
@@ -382,7 +447,6 @@ a.buttons:hover {
     max-width: 800px;
   }
 }
-
 
 
 
