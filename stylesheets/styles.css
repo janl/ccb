@@ -367,9 +367,9 @@ a.buttons:hover {
 }
 
 .speakers img {
-  width: 80px;
+  width: 100px;
   border: 4px solid white;
-  border-radius: 50px;
+  border-radius: 70px;
 }
 
 .speakers h4 {
@@ -421,7 +421,7 @@ a.buttons:hover {
 
   .speakers img {
     float: left;
-    margin: 10px 20px;
+    margin: 5px 20px 10px;
   }
 
   .speakers .info {
