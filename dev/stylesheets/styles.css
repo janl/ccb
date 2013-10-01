@@ -262,7 +262,7 @@ nav a:link,
 nav a:visited {
   display: inline-block;
   /*margin: 0 0 .25em 0;*/
-  padding: .25em .5em;
+  padding: .25em 1.5em;
   font-size: 1.4em;
   text-decoration: none;
   border-bottom: 1px solid #0b334e;
@@ -349,7 +349,19 @@ a.buttons:hover {
   text-decoration: none;
 }
 
+.speakers li {
+  list-style: none;
+}
 
+.speakers img {
+  display: table-cell;
+  border: 4px solid white;
+  border-radius: 50px;
+}
+
+.speakers h4 {
+  display: table-cell;
+}
 
 /* --------------- Screens bigger than 620px ----------- */
 @media only screen and (min-width: 620px) {
