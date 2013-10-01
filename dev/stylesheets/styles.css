@@ -260,11 +260,15 @@ nav a,
 nav a:link,
 nav a:visited {
   display: inline-block;
-  margin: 0 0 .25em 0;
+  /*margin: 0 0 .25em 0;*/
   padding: .25em .5em;
   font-size: 1.4em;
   text-decoration: none;
-  border: 1px solid #0b334e;
+  border-bottom: 1px solid #0b334e;
+}
+
+nav a:first-child {
+  border-top: 1px solid #0b334e;
 }
 
 nav a:hover,
@@ -316,6 +320,16 @@ header li:hover {
   background: linear-gradient(top, #C3001D 0%,#950119 100%);
 }
 
+a.register {
+  background: #e91d25;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 300;
+  padding: 11px 16px;
+  box-shadow: 4px 4px rgba(0,0,0,0.3);
+}
+
 a.buttons {
   -webkit-font-smoothing: antialiased;
   background: url(../images/arrow-down.png) no-repeat;
@@ -356,14 +370,24 @@ a.buttons:hover {
     width: 63%;
     padding-right: 6%;
     padding-left: 6%;
-
     box-shadow: -4px 0 0 1px rgba(0,0,0,0.2);
-}
+  }
 
   nav a,
   nav a:link,
   nav a:visited {
     display: block;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav a:after {
+    content: "❯";
+    color: #0b334e;
+    position: absolute;
+    right: 1em;
   }
 }
 
