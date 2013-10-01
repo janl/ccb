@@ -429,6 +429,11 @@ a.buttons:hover {
     margin-left: 150px;
   }
 
+  a.register:after {
+    content: "❯";
+    padding-left: 20px;
+    font-weight: bold;
+  }
 }
 
 /* --------------- Screens bigger than 768px ----------- */
