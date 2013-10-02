@@ -362,6 +362,7 @@ a.buttons:hover {
 
 .speakers li {
   list-style: none;
+  text-align: center;
   clear: both;
   min-height: 150px;
 }
@@ -373,7 +374,7 @@ a.buttons:hover {
 }
 
 .speakers h4 {
-  display: table-cell;
+  margin: 0 0 10px;
 }
 
 /* --------------- Screens bigger than 620px ----------- */
@@ -422,6 +423,10 @@ a.buttons:hover {
   .speakers img {
     float: left;
     margin: 5px 20px 10px;
+  }
+
+  .speakers li {
+    text-align: inherit;
   }
 
   .speakers .info {
