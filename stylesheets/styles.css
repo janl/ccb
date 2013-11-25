@@ -190,6 +190,9 @@ td {
   background: #125682;
 }
 
+td:nth-child(1) {
+  vertical-align:middle;
+}
 td:nth-child(2) {
   background: none;
   border-bottom: 1px solid #125682;
@@ -376,6 +379,40 @@ a.buttons:hover {
 
 .speakers h4 {
   margin: 0 0 10px;
+}
+
+/**
+ * Magnific Popup
+ * Simple fade transition,
+ */
+td .popup-youtube {
+  color:white;
+  float:right;
+}
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
 }
 
 /* --------------- Screens bigger than 620px ----------- */
